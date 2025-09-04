@@ -1,16 +1,16 @@
 import typing
 def binarysearch(arr: list[int], target: int)->int:
 
-    left, rigth = 0, len(arr)-1
+    left, right = 0, len(arr)-1
 
-    while left <=rigth:
-        middle = left+rigth//2
-        if target == middle:
+    while left <=right:
+        middle = (left+right)//2
+        if target == arr[middle]:
             return middle
-        elif target>middle:
+        elif target>arr[middle]:
             left = middle+1
-        elif target < middle:
-            rigth = middle - 1
+        elif target < arr[middle]:
+            right = middle - 1
 
     return -1
 
